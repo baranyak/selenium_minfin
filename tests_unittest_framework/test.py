@@ -2,7 +2,7 @@ __author__ = 'User_name'
 
 import unittest
 from selenium import webdriver
-import pages
+import selenium_minfin.pages as pages
 
 
 class TestMinfinComUa(unittest.TestCase):
