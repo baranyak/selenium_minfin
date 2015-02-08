@@ -1,14 +1,20 @@
 __author__ = 'User_name'
 
 import unittest
+
 from selenium import webdriver
+
 import pages
 
 
 class TestMinfinComUa(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        fp = webdriver.FirefoxProfile()
+        fp.add_extension(extension='../firebug-2.0.8-fx.xpi')
+        fp.set_preference("extensions.firebug.currentVersion", "2.0.8")
+
+        self.driver = webdriver.Firefox(firefox_profile=fp)
         self.driver.maximize_window()
         self.driver.get("http://minfin.com.ua/")
 
@@ -19,6 +25,12 @@ class TestMinfinComUa(unittest.TestCase):
     def test_entrance_window(self):
         main_page = pages.MainPage(self.driver)
         assert main_page.click_entrance_button(), "login page is not displayed"
+
+    def test_login(self):
+        main_page = pages.MainPage(self.driver)
+        main_page.click_entrance_button()
+        main_page.log_in('testlogin', '101160235r')
+        assert main_page.user_bar_presence(), 'fail to login'
 
     def tearDown(self):
         self.driver.close()

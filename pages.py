@@ -20,8 +20,11 @@ class MainPage(BasePage):
         login_window = self.driver.find_element(*MainPageLocators.LOGIN_WINDOW)
         return login_window.is_displayed()
 
+    def log_in(self, username, password):
+        self.driver.find_element(*MainPageLocators.LOGIN).send_keys(username)
+        self.driver.find_element(*MainPageLocators.PASSWORD).send_keys(password)
+        self.driver.find_element(*MainPageLocators.LOGIN_BUTTON).submit()
 
-class CurrencyPage(BasePage):
+    def user_bar_presence(self):
+        return self.driver.find_element(*MainPageLocators.USER_PICTOGRAM).is_displayed()
 
-    def bla(self):
-        pass
