@@ -1,6 +1,6 @@
 __author__ = 'User_name'
 
-from locators import MainPageLocators
+from selenium_minfin.locators import MainPageLocators
 
 
 class BasePage:

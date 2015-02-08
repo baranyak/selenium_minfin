@@ -2,7 +2,7 @@ __author__ = 'User_name'
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class BasePageElement(object):
+class BasePageElement:
 
     def __set__(self, obj, value):
         driver = obj.driver
@@ -16,3 +16,6 @@ class BasePageElement(object):
             lambda driver: driver.find_element_by_name(self.locator))
         element = driver.find_element_by_name(self.locator)
         return element.get_attribute("value")
+
+if __name__ == "__main__":
+    base_page_element = BasePageElement()
