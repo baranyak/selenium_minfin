@@ -20,17 +20,17 @@ class TestMinfinComUa(unittest.TestCase):
 
     def test_title_of_main_page(self):
         main_page = pages.MainPage(self.driver)
-        assert main_page.is_title_matches(), "minfin.com.ua title doesn't match."
+        self.assertTrue(main_page.is_title_matches(), "minfin.com.ua title doesn't match.")
 
     def test_entrance_window(self):
         main_page = pages.MainPage(self.driver)
-        assert main_page.click_entrance_button(), "login page is not displayed"
+        self.assertTrue(main_page.click_entrance_button(), "login page is not displayed")
 
     def test_login(self):
         main_page = pages.MainPage(self.driver)
         main_page.click_entrance_button()
         main_page.log_in('testlogin', '101160235r')
-        assert main_page.user_bar_presence(), 'fail to login'
+        self.assertTrue(main_page.user_bar_presence(), 'fail to login')
 
     def tearDown(self):
         self.driver.close()
