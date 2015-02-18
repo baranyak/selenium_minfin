@@ -1,6 +1,6 @@
 __author__ = 'User_name'
 
-from selenium_minfin.locators import MainPageLocators
+from locators import MainPageLocators
 
 
 class BasePage:
@@ -26,5 +26,5 @@ class MainPage(BasePage):
         self.driver.find_element(*MainPageLocators.LOGIN_BUTTON).submit()
 
     def user_bar_presence(self):
-        return self.driver.find_element(*MainPageLocators.USER_PICTOGRAM).is_displayed()
+        return self.driver.find_element(*MainPageLocators.USD_SPOT_MARKET_RATE).is_displayed()
 

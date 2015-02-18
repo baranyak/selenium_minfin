@@ -10,3 +10,7 @@ class MainPageLocators:
     REMIND_ME_CHECKBOX = (By.XPATH, '//label[text()="Запомнить меня"]')
     LOGIN_BUTTON = (By.CLASS_NAME, 'mfz-form-submit-btn')
     USER_PICTOGRAM = (By.CLASS_NAME, 'js-mfz-userbar-toggle')
+
+    USD_SPOT_MARKET_RATE = (By.XPATH, "//section/a[1]")
+    USD_INTERBANK_RATE = (By.XPATH, "//section/a[2]")
+    RUS_RUBLE_RATES = (By.XPATH, "//section/a[3]")
