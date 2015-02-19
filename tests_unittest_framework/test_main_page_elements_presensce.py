@@ -14,8 +14,6 @@ class TestMainPageElementsPresence(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         fp = webdriver.FirefoxProfile()
-        import os
-        print(os.getcwd())
         fp.add_extension(extension=PROJECT_ROOT + '/firebug-2.0.8-fx.xpi')
         fp.set_preference("extensions.firebug.currentVersion", "2.0.8")
         cls.driver = webdriver.Firefox(firefox_profile=fp)
@@ -51,4 +49,6 @@ class TestMainPageElementsPresence(unittest.TestCase):
         cls.driver.close()
 
 if __name__ == "__main__":
+    # import xmlrunner
+    # unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
     unittest.main()
