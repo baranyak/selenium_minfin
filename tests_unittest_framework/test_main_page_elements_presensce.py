@@ -5,6 +5,7 @@ from selenium import webdriver
 
 import pages
 from locators import MainPageLocators
+from configuration import PROJECT_ROOT
 from configuration import BASE_URL
 
 
@@ -13,7 +14,9 @@ class TestMainPageElementsPresence(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         fp = webdriver.FirefoxProfile()
-        fp.add_extension(extension='../firebug-2.0.8-fx.xpi')
+        import os
+        print(os.getcwd())
+        fp.add_extension(extension=PROJECT_ROOT + '/firebug-2.0.8-fx.xpi')
         fp.set_preference("extensions.firebug.currentVersion", "2.0.8")
         cls.driver = webdriver.Firefox(firefox_profile=fp)
         cls.driver.maximize_window()
