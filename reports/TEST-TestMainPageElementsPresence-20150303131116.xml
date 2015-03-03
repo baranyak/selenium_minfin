@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="TestMainPageElementsPresence-20150303131116" tests="5" time="0.115">
+	<properties/>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+	<testcase classname="TestMainPageElementsPresence" name="test_main_news_block_presence" time="0.054"/>
+	<testcase classname="TestMainPageElementsPresence" name="test_russian_ruble_rates_presence" time="0.016"/>
+	<testcase classname="TestMainPageElementsPresence" name="test_title_of_main_page" time="0.012"/>
+	<testcase classname="TestMainPageElementsPresence" name="test_usd_interbank_rate_presence" time="0.015"/>
+	<testcase classname="TestMainPageElementsPresence" name="test_usd_spot_market_rate_presence" time="0.019"/>
+</testsuite>
