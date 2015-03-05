@@ -1,4 +1,4 @@
-__author__ = 'User_name'
+__author__ = 'mbaranyak'
 
 import unittest
 from selenium import webdriver
@@ -40,7 +40,7 @@ class TestMainPageElementsPresence(unittest.TestCase):
         self.assertTrue(self.driver.find_element(*MainPageLocators.MAIN_NEWS_BLOCK).is_displayed(),
                         "Main news block is not presence.")
 
-    def test_main_news_block_presence(self):
+    def test_news_block_presence(self):
         self.assertTrue(self.driver.find_element(*MainPageLocators.NEWS_BLOCK).is_displayed(),
                         "News block is not presence.")
 

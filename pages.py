@@ -1,4 +1,4 @@
-__author__ = 'User_name'
+__author__ = 'mbaranyak'
 
 from locators import MainPageLocators
 

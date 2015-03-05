@@ -1,6 +1,6 @@
 __author__ = 'mbaranyak'
 
-PROJECT_ROOT = '/home/mbaranyak/PycharmProjects/selenium/selenium_minfin'
+PROJECT_ROOT = '.'
 
 BASE_URL = 'http://minfin.com.ua/'
 USERNAME = 'testlogin'
