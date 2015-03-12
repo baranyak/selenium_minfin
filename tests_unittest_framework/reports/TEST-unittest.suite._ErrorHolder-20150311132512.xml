@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" name="unittest.suite._ErrorHolder-20150311132512" tests="1" time="0.000">
+	<properties/>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+	<testcase classname="unittest.suite._ErrorHolder" name="TestMainPageElementsPresence)" time="0.000">
+		<error message="[Errno 2] No such file or directory: './firebug-2.0.8-fx.xpi'" type="FileNotFoundError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/mbaranyak/PycharmProjects/selenium/selenium_minfin/tests_unittest_framework/test_main_page_elements_presence.py", line 17, in setUpClass
+    fp.add_extension(extension=PROJECT_ROOT + '/firebug-2.0.8-fx.xpi')
+  File "/usr/local/lib/python3.4/dist-packages/selenium/webdriver/firefox/firefox_profile.py", line 92, in add_extension
+    self._install_extension(extension)
+  File "/usr/local/lib/python3.4/dist-packages/selenium/webdriver/firefox/firefox_profile.py", line 255, in _install_extension
+    compressed_file = zipfile.ZipFile(addon, 'r')
+  File "/usr/lib/python3.4/zipfile.py", line 923, in __init__
+    self.fp = io.open(file, modeDict[mode])
+FileNotFoundError: [Errno 2] No such file or directory: './firebug-2.0.8-fx.xpi'
+]]>		</error>
+	</testcase>
+</testsuite>

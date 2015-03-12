@@ -5,8 +5,8 @@ from selenium import webdriver
 
 import pages
 from locators import MainPageLocators
-from configuration import PROJECT_ROOT
-from configuration import BASE_URL
+from config import PROJECT_ROOT
+from config import BASE_URL
 
 
 class TestMainPageElementsPresence(unittest.TestCase):
@@ -24,17 +24,17 @@ class TestMainPageElementsPresence(unittest.TestCase):
         main_page = pages.MainPage(self.driver)
         self.assertTrue(main_page.is_title_matches(), "title doesn't match.")
 
-    def test_usd_spot_market_rate_presence(self):
-        self.assertTrue(self.driver.find_element(*MainPageLocators.USD_SPOT_MARKET_RATE).is_displayed(),
-                        "Block 'USD spot market rate' element is not presence.")
+    # def test_usd_spot_market_rate_presence(self):
+    #     self.assertTrue(self.driver.find_element(*MainPageLocators.USD_SPOT_MARKET_RATE).is_displayed(),
+    #                     "Block 'USD spot market rate' element is not presence.")
 
-    def test_usd_interbank_rate_presence(self):
-        self.assertTrue(self.driver.find_element(*MainPageLocators.USD_INTERBANK_RATE).is_displayed(),
-                        "Block 'USD interbank rate' element is not presence.")
+    # def test_usd_interbank_rate_presence(self):
+    #     self.assertTrue(self.driver.find_element(*MainPageLocators.USD_INTERBANK_RATE).is_displayed(),
+    #                     "Block 'USD interbank rate' element is not presence.")
 
-    def test_russian_ruble_rates_presence(self):
-        self.assertTrue(self.driver.find_element(*MainPageLocators.RUS_RUBLE_RATES).is_displayed(),
-                        "Block 'Ruble rates' element is not presence.")
+    # def test_russian_ruble_rates_presence(self):
+    #     self.assertTrue(self.driver.find_element(*MainPageLocators.RUS_RUBLE_RATES).is_displayed(),
+    #                     "Block 'Ruble rates' element is not presence.")
 
     def test_main_news_block_presence(self):
         self.assertTrue(self.driver.find_element(*MainPageLocators.MAIN_NEWS_BLOCK).is_displayed(),

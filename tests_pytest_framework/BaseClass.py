@@ -1,8 +1,8 @@
 __author__ = 'mbaranyak'
 
 from selenium import webdriver
-from configuration import PROJECT_ROOT
-from configuration import BASE_URL
+from config import PROJECT_ROOT
+from config import BASE_URL
 
 
 class BaseClass:
