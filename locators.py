@@ -1,4 +1,5 @@
 __author__ = 'mbaranyak'
+
 from selenium.webdriver.common.by import By
 
 
@@ -17,3 +18,8 @@ class MainPageLocators:
 
     MAIN_NEWS_BLOCK = (By.XPATH, '//div[@class="mfz-news-list mfz-news-list-hot"]')
     NEWS_BLOCK = (By.XPATH, '//div[@class="mfz-news-list"]')
+
+
+class InterbankPageLocators:
+    # CURRENCY_GRAPH = (By.ID, 'chart-ibusdday')
+    ERROR_MESSAGE_LOGIN = (By.XPATH, '//div[starts-with(.,"Неправильное имя пользователя или пароль!")]')

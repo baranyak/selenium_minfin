@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="TestMainPageElementsPresence-20150313105718" tests="3" time="0.074">
+	<properties/>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+	<testcase classname="TestMainPageElementsPresence" name="test_main_news_block_presence" time="0.049"/>
+	<testcase classname="TestMainPageElementsPresence" name="test_news_block_presence" time="0.018"/>
+	<testcase classname="TestMainPageElementsPresence" name="test_title_of_main_page" time="0.006"/>
+</testsuite>
