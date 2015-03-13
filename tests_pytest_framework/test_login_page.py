@@ -2,7 +2,7 @@ __author__ = 'mbaranyak'
 
 import pages
 import config
-from BaseClass import BaseClass
+from tests_pytest_framework.BaseClass import BaseClass
 
 
 class TestLogIn(BaseClass):

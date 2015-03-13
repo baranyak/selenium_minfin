@@ -1,6 +1,7 @@
 __author__ = 'mbaranyak'
 
 from locators import MainPageLocators
+from locators import LoginPageLocators
 from locators import InterbankPageLocators
 
 
@@ -37,10 +38,16 @@ class MainPage(BasePage):
 class InterbankPage(BasePage):
 
     def is_title_matches(self):
-        return 'Межбанк онлайн, межбанковский курс валют в Украине, котировки межбанка — Минфин:' == self.driver.title
+        return 'Межбанк онлайн, межбанковский курс валют в Украине, котировки межбанка — Минфин' == self.driver.title
+
+    def usd_graph_presence(self):
+        return self.driver.find_element(*InterbankPageLocators.USD_CURRENCY_GRAPH).is_displayed()
+
+    def main_header_presence(self):
+        return self.driver.find_element(*InterbankPageLocators.MAIN_HEADER).is_displayed()
 
 
 class LoginPage(BasePage):
 
     def login_error_message_presence(self):
-        return self.driver.find_element(*InterbankPageLocators.ERROR_MESSAGE_LOGIN).is_displayed()
+        return self.driver.find_element(*LoginPageLocators.ERROR_MESSAGE_LOGIN).is_displayed()
